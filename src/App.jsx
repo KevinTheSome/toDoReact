@@ -19,14 +19,12 @@ function App() {
 
   //console.log(data);
 
-  const dataJSX = data.map(element => {
-    <TodoObject key={element.userId} id={element.id} title={element.title} completed={element.completed}/>
-    console.log(element);
+  const dataJSX = data.map((object,index) => {
+    return <TodoObject key={index} userId={object.userId} id={object.id} title={object.title} completed={object.completed}/>
   })
 
   return (
     <>
-    <h1>todo</h1>
     {dataJSX}
     </>
   )
